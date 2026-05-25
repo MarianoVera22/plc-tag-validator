@@ -1,0 +1,5 @@
+name,address,data_type,description
+Motor_01_Run,M100.0,BOOL,Marcha del motor 1
+Motor_01_Velocidad,DB10.DBD4,REAL,Velocidad en RPM
+Temp_Horno,IW64,INT,Temperatura del horno
+Valvula_Apertura,Q2.3,BOOL,
