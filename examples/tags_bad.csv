@@ -1,0 +1,5 @@
+name,address,data_type,description
+Motor_Run,X999,BOOL,Direccion invalida
+Motor_Run,M0.0,BOOL,Nombre duplicado
+Velocidad,DB10.DBW4,REAL,Tipo incoherente con direccion
+SinDescripcion,M5.0,BOOL,
