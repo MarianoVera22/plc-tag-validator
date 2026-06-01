@@ -52,13 +52,18 @@ Temp_Horno,IW64,INT,Temperatura del horno
 
 ### Ejemplo de salida
 
+```text
 Tags analizados: 4
+
 ERRORES (2):
 [ERROR] 'Motor_Run': Dirección inválida 'X999': no coincide con ningún formato Siemens S7
 [ERROR] 'Velocidad': Incoherencia: tipo REAL (32 bits) en dirección 'DB10.DBW4' (16 bits)
+
 ADVERTENCIAS (1):
 [WARNING] 'SinDescripcion': Tag sin descripción
+
 Resumen: 4 tags, 2 errores, 1 advertencias
+```
 
 ## Tipos de dato soportados
 
@@ -87,6 +92,7 @@ uv run ruff check --fix .            # arreglar lo auto-arreglable
 
 ## Arquitectura
 
+```text
 src/plc_tag_validator/
 ├── models.py        # Tag, DataType, ValidationIssue, Severity
 ├── address.py       # Parser de direcciones Siemens
@@ -95,6 +101,7 @@ src/plc_tag_validator/
 ├── validators.py    # Reglas de validación (extensibles vía Protocol)
 ├── reporter.py      # Formateo de salida
 └── cli.py           # Punto de entrada CLI
+```
 
 ## Licencia
 
