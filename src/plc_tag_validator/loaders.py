@@ -32,9 +32,7 @@ def _row_to_tag(row: dict[str, str], line: int) -> Tag:
     # Verificar campos obligatorios presentes
     missing = _REQUIRED_FIELDS - row.keys()
     if missing:
-        raise LoaderError(
-            f"Línea {line}: faltan campos obligatorios: {', '.join(sorted(missing))}"
-        )
+        raise LoaderError(f"Línea {line}: faltan campos obligatorios: {', '.join(sorted(missing))}")
 
     raw_type = row["data_type"].strip().upper()
     try:
@@ -131,5 +129,3 @@ def load_tags(path: Path) -> list[Tag]:
     if suffix == ".json":
         return load_json(path)
     raise LoaderError(f"Formato no soportado: '{suffix}'. Usá .csv o .json")
-
-

@@ -27,9 +27,7 @@ VALID_ADDRESSES = [
 
 
 @pytest.mark.parametrize("address,expected_width,expected_is_bit", VALID_ADDRESSES)
-def test_parse_valid_addresses(
-    address: str, expected_width: int, expected_is_bit: bool
-) -> None:
+def test_parse_valid_addresses(address: str, expected_width: int, expected_is_bit: bool) -> None:
     """Las direcciones válidas se parsean con el ancho y tipo correctos."""
     result = parse_address(address)
     assert result.bit_width == expected_width
@@ -37,14 +35,14 @@ def test_parse_valid_addresses(
 
 
 INVALID_ADDRESSES = [
-    "",                # vacía
-    "   ",             # solo espacios
-    "X100",            # área inexistente
-    "M100.8",          # bit fuera de rango (0-7)
-    "DB10.DBXX0.0",    # typo: DBXX
-    "MW",              # falta el número
-    "DB.DBW4",         # falta número de DB
-    "REAL",            # un tipo de dato, no una dirección
+    "",  # vacía
+    "   ",  # solo espacios
+    "X100",  # área inexistente
+    "M100.8",  # bit fuera de rango (0-7)
+    "DB10.DBXX0.0",  # typo: DBXX
+    "MW",  # falta el número
+    "DB.DBW4",  # falta número de DB
+    "REAL",  # un tipo de dato, no una dirección
 ]
 
 

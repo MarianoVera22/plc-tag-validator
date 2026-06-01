@@ -77,6 +77,7 @@ def test_detects_missing_description() -> None:
     assert len(issues) == 1
     assert issues[0].severity == Severity.WARNING
 
+
 def test_validate_name_length() -> None:
     """Nombres largos generan WARNING, los cortos no."""
     tags = [
@@ -91,7 +92,7 @@ def test_validate_name_length() -> None:
 def test_validate_all_combines_issues() -> None:
     """validate_all junta problemas de múltiples reglas."""
     tags = [
-        Tag("Dup", "X999", DataType.BOOL, ""),   # dirección inválida + sin desc
+        Tag("Dup", "X999", DataType.BOOL, ""),  # dirección inválida + sin desc
         Tag("Dup", "M0.0", DataType.BOOL, "ok"),  # nombre duplicado
     ]
     issues = validate_all(tags)

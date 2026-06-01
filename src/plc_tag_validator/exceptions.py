@@ -15,5 +15,6 @@ class InvalidAddressError(PlcValidatorError):
         self.reason = reason
         super().__init__(f"Dirección inválida '{address}': {reason}")
 
+
 class LoaderError(PlcValidatorError):
     """Error al cargar o parsear un archivo de tags."""

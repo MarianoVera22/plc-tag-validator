@@ -16,9 +16,9 @@ from plc_tag_validator.models import DataType, Severity, Tag, ValidationIssue
 
 # Anchos de bit esperados por tipo de dato (para chequear coherencia con la dirección)
 _BOOL_TYPES = {DataType.BOOL}
-_WORD_TYPES = {DataType.INT, DataType.WORD}      # 16 bits
+_WORD_TYPES = {DataType.INT, DataType.WORD}  # 16 bits
 _DWORD_TYPES = {DataType.DINT, DataType.DWORD, DataType.REAL}  # 32 bits
-_BYTE_TYPES = {DataType.BYTE}                     # 8 bits
+_BYTE_TYPES = {DataType.BYTE}  # 8 bits
 
 
 class Validator(Protocol):
@@ -121,6 +121,7 @@ def validate_descriptions(tags: list[Tag]) -> list[ValidationIssue]:
                 )
             )
     return issues
+
 
 def validate_name_length(tags: list[Tag]) -> list[ValidationIssue]:
     """Advierte sobre nombres con mas de 24 caracteres"""

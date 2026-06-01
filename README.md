@@ -72,7 +72,7 @@ Resumen: 4 tags, 2 errores, 1 advertencias
 ## Formatos de dirección soportados
 
 | Formato | Ejemplo | Descripción |
-|---|---|---|
+| --- | --- | --- |
 | Bit de memoria | `M100.0` | Marca, bit individual |
 | Byte/Word/DWord de memoria | `MB10`, `MW20`, `MD40` | Marca con tamaño |
 | Bit de entrada/salida | `I0.1`, `Q2.3` | Imagen de proceso |
@@ -106,4 +106,3 @@ src/plc_tag_validator/
 ## Licencia
 
 MIT
-

@@ -45,9 +45,7 @@ def build_report(issues: list[ValidationIssue], total_tags: int) -> str:
         lines.append("Sin problemas. Todos los tags son válidos.")
         lines.append("")
 
-    lines.append(
-        f"Resumen: {total_tags} tags, {len(errors)} errores, {len(warnings)} advertencias"
-    )
+    lines.append(f"Resumen: {total_tags} tags, {len(errors)} errores, {len(warnings)} advertencias")
 
     return "\n".join(lines)
 

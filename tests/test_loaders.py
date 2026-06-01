@@ -84,6 +84,7 @@ def test_load_tags_unsupported_extension(tmp_path: Path) -> None:
     with pytest.raises(LoaderError, match="no soportado"):
         load_tags(txt_file)
 
+
 def test_load_json_not_a_list(tmp_path: Path) -> None:
     """Un JSON que es un objeto (no una lista) lanza LoaderError."""
     json_file = tmp_path / "object.json"
